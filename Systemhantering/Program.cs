@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
+using Systemhantering.DBcontext;
+
 namespace Systemhantering
 {
     public class Program
@@ -13,6 +16,9 @@ namespace Systemhantering
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<UserAuthContext>(options =>
+            options.UseSqlServer("Server=localhost;Database=UserAuthDB;Trusted_Connection=True;TrustServerCertificate=True"));
 
             var app = builder.Build();
 
