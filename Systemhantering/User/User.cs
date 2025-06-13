@@ -1,4 +1,4 @@
-﻿namespace Systemhantering.User
+﻿namespace Systemhantering.Model
 {
     public class User
     {

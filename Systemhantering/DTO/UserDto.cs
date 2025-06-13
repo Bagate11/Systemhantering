@@ -1,0 +1,17 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Systemhantering.DTO
+{
+    public class UserDto
+    {
+        public int Id { get; set; }
+        [Required]
+        [MinLength(6)]
+        public string Username { get; set; }
+      
+        [Required]
+        [MinLength(8)]
+        public string Password { get; set; }
+      
+    }
+}
